@@ -1,0 +1,21 @@
+Create a Shoe Store database
+
+CREATE TABLE shoe_store (id INTEGER PRIMARY KEY, style TEXT, color TEXT, price INTEGER, season TEXT, quantity INTEGER);
+
+INSERT INTO shoe_store VALUES (1, "sandals", "white", 20, "summer", 3);
+INSERT INTO shoe_store VALUES (2, "sneakers", "black", 50, "fall", 4);
+INSERT INTO shoe_store VALUES (3, "boots", "brown", 40, "winter", 3);
+INSERT INTO shoe_store VALUES (4, "mules", "tan", 25, "spring", 3);
+INSERT INTO shoe_store VALUES (5, "clogs", "black", 30, "fall", 4);
+
+Display shoe store data
+SELECT * FROM shoe_store;
+
+Display total number of shoes sold
+SELECT SUM(quantity) FROM shoe_store;
+
+Display shoes sold from lowest price to highest
+SELECT * FROM shoe_store WHERE price >=20 ORDER BY price;
+
+Display average cost of shoes sold
+SELECT AVG(price) FROM shoe_store;
